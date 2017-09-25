@@ -194,3 +194,14 @@ Elasticsearch OPS too, if using an OPS cluster:
   Defaults to 'logging-mux'.
 - `openshift_logging_mux_file_buffer_storage_group`: The storage group used for Mux.
   Defaults to '65534'.
+
+### remote syslog forwarding
+`openshift_logging_fluentd_remote_syslog`: Set true to enable remote syslog forwarding, defaults to false
+`openshift_logging_fluentd_remote_syslog_host`: Required, hostname or IP of remote syslog
+`openshift_logging_fluentd_remote_syslog_port`: Port of remote syslog server, defaults to 514
+`openshift_logging_fluentd_remote_syslog_severity`: Severity level, defaults to debug
+`openshift_logging_fluentd_remote_syslog_facility`: Syslog facility, defaults to local0
+`openshift_logging_fluentd_remote_syslog_remove_tag_prefix`: Remove the prefix from the tag
+`openshift_logging_fluentd_remote_syslog_tag_key`: Use the field specified to set the key field in the syslog message
+`openshift_logging_fluentd_remote_syslog_use_record`: Use severity and facility from record if available
+`openshift_logging_fluentd_remote_syslog_payload_key`: Use the field specified from record to set payload
